@@ -1,4 +1,4 @@
-import {getEl} from './dom-worker';
+import {getEl} from './modules/dom-worker';
 
 
 const form = getEl('form');
