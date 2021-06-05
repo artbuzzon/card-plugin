@@ -233,17 +233,9 @@
         return tagsToReplace[tag] || tag;
       });
     };
-    import { getEl } from "./modules/dom-worker";
     const form = getEl("form");
     const root = getEl("card-widget_container");
-    form.addEventListener("submit", logSubmit);
-    const numberInputEl = getEl("number");
-    const expMMInputEl = getEl("exp_mm");
-    const expYYInputEl = getEl("exp_yy");
-    const cvvInputEl = getEl("cvv");
-    function logSubmit(event) {
-      event.preventDefault();
-    }
+
     const rules = {
       number: [
         FormValidator.CHECKS.ALPHANUMERIC,
