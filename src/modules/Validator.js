@@ -50,7 +50,8 @@ export default class FormValidator {
 
     static inputEvents = ['blur', 'keydown', 'keyup'];
 
-    constructor(_rules) {
+    constructor(rules) {
+        this._rules = rules;
         this._form = null;
         this._inputs = null;
         this._dataHandler = null;
@@ -149,4 +150,13 @@ export default class FormValidator {
         if (isValid)
             this._handle();
     }
+}
+
+export const loginValidationRules = {
+    login: [
+        FormValidator.CHECKS.MIN_LENGTH,
+        FormValidator.CHECKS.MAX_LENGTH,
+        FormValidator.CHECKS.ALPHANUMERIC
+    ],
+    password: [FormValidator.CHECKS.REQUIRED]
 }
