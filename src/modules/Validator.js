@@ -50,7 +50,8 @@ export default class FormValidator {
 
     static inputEvents = ['blur', 'keydown', 'keyup'];
 
-    constructor(_rules) {
+    constructor(rules) {
+        this._rules = rules;
         this._form = null;
         this._inputs = null;
         this._dataHandler = null;
