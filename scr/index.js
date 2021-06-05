@@ -9,7 +9,6 @@ const expMMInputEl = getEl('exp_mm')
 const expYYInputEl = getEl('exp_yy')
 const cvvInputEl = getEl('cvv')
 
-
 function logSubmit(event) {
   event.preventDefault();
 

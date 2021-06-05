@@ -26,7 +26,19 @@ const createEl = (el) => {
   return document.createElement(el);
 };
 
+const sanitizeHTML = (str) => {
+  const tagsToReplace = {
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;'
+  };
+  return str.replace(/[&<>]/g, function(tag) {
+    return tagsToReplace[tag] || tag;
+  });
+};
+
 export {
+  sanitizeHTML,
   getEl,
   getAllEls,
   append,
