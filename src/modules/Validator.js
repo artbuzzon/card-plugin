@@ -151,12 +151,3 @@ export default class FormValidator {
             this._handle();
     }
 }
-
-export const loginValidationRules = {
-    login: [
-        FormValidator.CHECKS.MIN_LENGTH,
-        FormValidator.CHECKS.MAX_LENGTH,
-        FormValidator.CHECKS.ALPHANUMERIC
-    ],
-    password: [FormValidator.CHECKS.REQUIRED]
-}
