@@ -1,5 +1,5 @@
 <div class="card-widget_container">
-  <form if="card-form">
+  <form id="card-form">
     <div class="card-widget__row">
       <div class="form__field-container number-group">
         <label for="number">Card Number</label>
@@ -234,25 +234,6 @@
       }
     };
 
-    const getAllEls = (id) => {
-      const els = document.querySelectorAll(id);
-      if (els) {
-        return els;
-      } else {
-        throw new Error(`There is no element with the id ${id} in the DOM`);
-      }
-    };
-
-    const append = (query, element) => {
-      const root = getEl(query);
-      root.appendChild(element);
-      return root;
-    };
-
-    const createEl = (el) => {
-      return document.createElement(el);
-    };
-
     const sanitizeHTML = (str) => {
       const tagsToReplace = {
         '&': '&amp;',
@@ -263,9 +244,6 @@
         return tagsToReplace[tag] || tag;
       });
     };
-
-    import {getEl} from './modules/dom-worker';
-
 
     const form = getEl('form');
     form.addEventListener('submit', logSubmit)
