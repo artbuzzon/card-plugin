@@ -1,0 +1,74 @@
+<div class="card-widget_container">
+  <form if="card-form">
+    <div class="card-widget__row">
+      <div class="form__field-container number-group">
+        <label for="number">Card Number</label>
+        <input type="text" id="number" name="number" />
+        <span class="form__error">Error</span>
+      </div>
+    </div>
+
+    <div class="card-widget__row">
+      <div class="exp-group">
+        <div class="form__field-container">
+          <label for="number">Experations date</label>
+          <input type="text" id="exp_mm" name="exp_mm" />
+          <span class="form__error">Error</span>
+        </div>
+
+        <div class="form__field-container">
+          <input type="text" id="exp_yy" name="exp_yy" />
+          <span class="form__error">Error</span>
+        </div>
+      </div>
+
+      <div class="form__field-container cvv-group">
+        <label for="number">CVV</label>
+        <input type="text" id="number" name="number" />
+        <span class="form__error">Error</span>
+      </div>
+    </div>
+  </form>
+</div>
+
+<style>
+  #app {
+    height: 100%;
+    width: 100%;
+  }
+
+  .card-widget_container {
+    width: 425px;
+    height: 265px;
+    border-radius: 1.5rem;
+
+    display: flex;
+    flex-flow: column;
+
+    background-color: beige;
+  }
+
+  .card-widget__row {
+    display: flex;
+    flex-flow: row;
+  }
+
+  .number-group {
+    display: flex;
+    flex-flow: column;
+    margin: 0 20px;
+    margin-top: 100px;
+  }
+
+  .exp-group {
+    display: flex;
+    flex-flow: column;
+    margin: 0 20px;
+  }
+
+  .css-group {
+    display: flex;
+    flex-flow: column;
+    margin: 0 20px;
+  }
+</style>
